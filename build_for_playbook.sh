@@ -38,9 +38,13 @@ PKG_CONFIG_LIBDIR=${PREFIX}/lib/pkgconfig
             --host=arm-unknown-nto-qnx6.5.0eabi \
             --disable-nls \
             --disable-static \
-            --disable-loadsave
+            --disable-loadsave \
+            --disable-check \
+            --disable-examples \
+            --disable-tests \
+            --with-pkg-config-path=${PREFIX}/lib/pkgconfig
 
-#PREFIX=${PREFIX} make all
+PREFIX=${PREFIX} make all
 
 
 if [ $? != 0 ]; then
@@ -48,7 +52,7 @@ if [ $? != 0 ]; then
   exit 1
 fi
 
-#PREFIX=${PREFIX} make install
+PREFIX=${PREFIX} make install
 
 
 echo "Build Successful!!"
