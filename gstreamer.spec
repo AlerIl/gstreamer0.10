@@ -2,7 +2,7 @@
 %define		majorminor	0.10
 
 %define 	_glib2		2.24
-%define 	_libxml2	2.4.9
+%define 	_libxml2	
 
 Name: 		%{gstreamer}
 Version: 	0.10.36
